@@ -15,6 +15,7 @@ public class ReplacePrefabsInScene : EditorWindow
 
     private void OnGUI()
     {
+        // TODO: Don't hardcode the filter, use a simple "contains" or Regex
         var sourceGameObjects = Editor.FindObjectsOfType<GameObject>()
             .Where(go => go.name.ToLower().StartsWith("sm_")).ToList();
 
